@@ -15,4 +15,43 @@ export const createUser = async (req, res) => {
   }
 };
 
+export const updateUser = async (req, res) => {
+  try {
+    const _id = req.params.id;
+    const findUser = await User.findById(_id);
+    if (!findUser) {
+      return error(res, "User not found", 400, "USER_NOT_FOUND");
+    }
+    const user = await User.findByIdAndUpdate(_id, {
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+    });
+    success(res, "User updated successfully", user);
+  } catch (err) {
+    error(res, err.message);
+  }
+};
 
+export const deleteUser = async (req, res) => {
+  try {
+    const _id = req.params.id;
+    const findUser = await User.findById(_id);
+    if (!findUser) {
+      return error(res, "User not found", 400, "USER_NOT_FOUND");
+    }
+    const user = await User.findByIdAndDelete(_id);
+    success(res, "User deleted successfully", user);
+  } catch (err) {
+    error(res, err.message);
+  }
+};
+
+export const getUser = async (req, res) => {
+  try {
+    const user = await User.find();
+    success(res, "User fetched successfully", user);
+  } catch (err) {
+    error(res, err.message);
+  }
+};

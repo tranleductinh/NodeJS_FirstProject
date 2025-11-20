@@ -9,3 +9,16 @@
 
 GET http://localhost:3001/api/users
 Content-type: application/json
+
+# PUT http://localhost:3001/api/users/6919a00193e211bd0c55db92
+# Content-Type: application/json
+
+# {
+#     "name": "Tinhs",
+#     "email": "tinhsasssâ@gmail.com",
+#     "password": "12345627"
+# }
+
+# DELETE http://localhost:3001/api/users/6919a00193e211bd0c55db92
+# Content-Type: application/json
+
