@@ -116,7 +116,7 @@ router.get("/", getUser);
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/UserResponse'
+ *               $ref: '#/components/schemas/User'
  *
  *       400:
  *         description: Email already exists (duplicate email while updating)
