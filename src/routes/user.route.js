@@ -40,7 +40,7 @@ const router = express.Router();
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               $ref: '#/components/schemas/User'
  *             example:
  *               success: false
  *               message: Email already exists
@@ -51,7 +51,7 @@ const router = express.Router();
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               $ref: '#/components/schemas/User'
  *             example:
  *               success: false
  *               message: Internal server error
@@ -130,7 +130,7 @@ router.get("/", getUser);
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               $ref: '#/components/schemas/User'
  *             example:
  *               success: false
  *               message: Email already exists
@@ -141,7 +141,7 @@ router.get("/", getUser);
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               $ref: '#/components/schemas/User'
  *             example:
  *               success: false
  *               message: User not found
@@ -198,7 +198,7 @@ router.put("/:id", updateUser);
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               $ref: '#/components/schemas/User'
  *             example:
  *               success: false
  *               message: User not found
