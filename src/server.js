@@ -1,7 +1,7 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
-import userRoute from "./routes/user.routes.js";
+import userRoute from "./routes/user.route.js";
 import express from "express";
 import { swaggerDocs } from '../swagger.js';
 dotenv.config();
