@@ -28,14 +28,6 @@ const options = {
             },
           },
         },
-        ErrorResponse: {
-          type: "object",
-          properties: {
-            success: { type: "boolean", example: false },
-            message: { type: "string", example: "Something went wrong" },
-            code: { type: "string", example: "INTERNAL_SERVER_ERROR" },
-          },
-        },
       },
     },
   },

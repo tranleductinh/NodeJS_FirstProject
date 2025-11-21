@@ -81,11 +81,18 @@ router.post("/", createUser);
  *               items:
  *                 $ref: '#/components/schemas/User'
  *       500:
- *         description: Failed to get users
+ *         description: Internal server error
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Something went wrong
+ *                 code:
+ *                   type: string
+ *                   example: INTERNAL_SERVER_ERROR
  */
 router.get("/", getUser);
 
@@ -141,11 +148,18 @@ router.get("/", getUser);
  *               code: USER_NOT_FOUND
  *
  *       500:
- *         description: Failed to update user
+ *         description: Internal server error
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Something went wrong
+ *                 code:
+ *                   type: string
+ *                   example: INTERNAL_SERVER_ERROR
  */
 router.put("/:id", updateUser);
 
@@ -191,11 +205,18 @@ router.put("/:id", updateUser);
  *               code: USER_NOT_FOUND
  *
  *       500:
- *         description: Failed to delete user
+ *         description: Internal server error
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/ErrorResponse'
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Something went wrong
+ *                 code:
+ *                   type: string
+ *                   example: INTERNAL_SERVER_ERROR
  */
 router.delete("/:id", deleteUser);
 
